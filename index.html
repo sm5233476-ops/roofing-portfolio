@@ -6,13 +6,13 @@
   <title>Ironcrest Roofing &amp; Restoration | Dallas, TX High-Performance Roofing</title>
   <meta name="description" content="Commercial &amp; residential roofing restoration across Dallas, Plano, Frisco, Irving, and Arlington. Built for North Texas hail seasons.">
 
-  <!-- Direct Embedded High-Resolution Branded Favicon (Replaces Default Browser Globe) -->
+  <!-- Direct Embedded High-Resolution Branded Favicon (Logo Tab Icon) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,2 30,12 26,12 26,28 6,28 6,12 2,12' fill='%23F97316'/%3E%3Cpolygon points='16,8 24,14 22,14 22,24 10,24 10,14 8,14' fill='%23111827'/%3E%3Cline x1='16' y1='12' x2='16' y2='24' stroke='%23F97316' stroke-width='2.5'/%3E%3C/svg%3E">
 
-  <!-- Agency-Grade Fonts: Teko (Aggressive Display), Barlow Condensed (Heavyweight Industrial), Plus Jakarta Sans (Modern Body) -->
+  <!-- Clean Agency Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Teko:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Teko:wght@600;700&display=swap" rel="stylesheet">
 
   <!-- External CDNs: Lenis, GSAP, ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.18/lenis.min.js"></script>
@@ -48,9 +48,10 @@
 
     <nav class="navbar" id="navbar" aria-label="Main Navigation">
       <div class="container nav-inner">
+        <!-- Logo with strict spacing guard -->
         <a href="#hero" class="brand-logo" aria-label="Ironcrest Roofing and Restoration Home">
           <span class="brand-crest">
-            <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true">
               <polygon points="16,2 30,12 26,12 26,28 6,28 6,12 2,12" fill="#F97316"/>
               <polygon points="16,8 24,14 22,14 22,24 10,24 10,14 8,14" fill="#111827"/>
               <line x1="16" y1="12" x2="16" y2="24" stroke="#F97316" stroke-width="2.5"/>
@@ -73,7 +74,7 @@
           </ul>
           <div class="nav-actions">
             <a href="tel:+12145550187" class="btn btn-outline nav-phone-btn" aria-label="Call (214) 555-0187">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <span>(214) 555-0187</span>
             </a>
             <button type="button" class="btn btn-primary nav-cta-btn open-modal-trigger" data-service="Roof Replacement">
@@ -93,7 +94,7 @@
 
   <main id="main-content">
 
-    <!-- SECTION 2: Hero Section (PHOTO 1: first.avif) -->
+    <!-- SECTION 2: Hero Section (PHOTO 1 Background + PHOTO 2 Featured Card) -->
     <section class="hero-section" id="hero" aria-labelledby="hero-title">
       <div class="hero-bg-wrapper">
         <img
@@ -110,7 +111,7 @@
 
       <div class="container hero-container">
         <div class="hero-layout">
-          <!-- Left Hero Column -->
+          <!-- Left Column: Clear Proportional Typography -->
           <div class="hero-content">
             <div class="hero-badge">
               <span class="badge-dot" aria-hidden="true"></span>
@@ -130,10 +131,10 @@
             <div class="hero-cta-group">
               <button type="button" class="btn btn-primary btn-lg open-modal-trigger magnetic-btn" data-service="Roof Replacement">
                 <span>Get a Free Roof Inspection</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
               <a href="tel:+12145550187" class="btn btn-secondary btn-lg magnetic-btn" aria-label="Call our Dallas roof emergency team directly">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 <span>Call (214) 555-0187</span>
               </a>
             </div>
@@ -163,24 +164,41 @@
             </div>
           </div>
 
-          <!-- Right Hero Column: Compact Glass Quick Booking Card -->
-          <div class="hero-glass-card cut-card">
-            <div class="glass-header">
+          <!-- Right Column: Featured Guy Working On Roof (PHOTO 2: second.avif) + Inspection Card -->
+          <div class="hero-visual-card cut-card">
+            <div class="hero-visual-img-wrap">
+              <img
+                src="second.avif"
+                alt="Certified roofer working on asphalt shingles in North Texas"
+                class="hero-visual-img"
+                width="700"
+                height="450"
+                fetchpriority="high"
+                onerror="this.parentElement.classList.add('img-fallback');"
+              >
+              <div class="hero-visual-badge">
+                <span class="pulse-beacon" aria-hidden="true"></span>
+                <span>Active DFW Field Crew</span>
+              </div>
+            </div>
+
+            <div class="hero-visual-body">
               <span class="glass-tag">DIRECT INSPECTION DESK</span>
               <h2 class="glass-title">Schedule A Free Roof Check</h2>
-              <p class="glass-desc">Our Dallas restoration team will physically inspect your decking, flashing, and shingles with zero cost or obligation.</p>
+              <p class="glass-desc">Our Dallas restoration team will physically inspect your decking, flashing, and shingles with zero obligation.</p>
+              
+              <div class="glass-contact-badge">
+                <span class="glass-phone-label">Urgent Storm Inquiries:</span>
+                <a href="tel:+12145550187" class="glass-phone-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>(214) 555-0187</span>
+                </a>
+              </div>
+
+              <button type="button" class="btn btn-primary btn-block open-modal-trigger" data-service="Roof Replacement">
+                <span>Book Inspection Online</span>
+              </button>
             </div>
-            <div class="glass-contact-badge">
-              <span class="glass-phone-label">Urgent Storm Inquiries:</span>
-              <a href="tel:+12145550187" class="glass-phone-link">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span>(214) 555-0187</span>
-              </a>
-            </div>
-            <button type="button" class="btn btn-primary btn-block open-modal-trigger" data-service="Roof Replacement">
-              <span>Book Inspection Online</span>
-            </button>
-            <p class="glass-micro">Address: 4120 Commerce St, Suite 210, Dallas, TX 75226</p>
           </div>
         </div>
       </div>
@@ -215,7 +233,7 @@
               <p class="bento-text">Complete tear-off and replacement using high-impact architectural shingles engineered for severe wind uplift and North Texas thermal stress.</p>
               <button type="button" class="service-link-btn open-modal-trigger" data-service="Roof Replacement">
                 <span>Request Scope</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
             </div>
           </article>
@@ -239,7 +257,7 @@
               <p class="bento-text">Standing seam and architectural steel systems offering long-term wind resistance, superior fire ratings, and solar thermal reflection.</p>
               <button type="button" class="service-link-btn open-modal-trigger" data-service="Metal Roofing">
                 <span>Request Scope</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
             </div>
           </article>
@@ -263,7 +281,7 @@
               <p class="bento-text">Forensic inspection following severe weather. We document granule loss, dented flashing, and underlayment punctures to support your insurer discussions.</p>
               <button type="button" class="service-link-btn open-modal-trigger" data-service="Storm and Hail Damage">
                 <span>Request Scope</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
             </div>
           </article>
@@ -271,46 +289,46 @@
           <!-- BENTO 4: Roof Repair -->
           <article class="bento-card bento-card-compact cut-card">
             <div class="bento-icon-wrapper" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
             </div>
             <h3 class="bento-compact-title">Roof Repair</h3>
             <p class="bento-compact-text">Targeted flashing repairs, pipe collar sealing, and shingle patching to stop active leaks before interior decking sustains rot.</p>
             <button type="button" class="service-link-btn text-dark-btn open-modal-trigger" data-service="Roof Repair">
               <span>Book Repair</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
           </article>
 
           <!-- BENTO 5: Gutters & Drainage -->
           <article class="bento-card bento-card-compact cut-card">
             <div class="bento-icon-wrapper" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
             </div>
             <h3 class="bento-compact-title">Gutters &amp; Drainage</h3>
             <p class="bento-compact-text">Custom seamless aluminum gutters and high-capacity downspouts engineered to channel severe Texas downpours away from foundations.</p>
             <button type="button" class="service-link-btn text-dark-btn open-modal-trigger" data-service="Gutters and Drainage">
               <span>Book Gutters</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
           </article>
 
           <!-- BENTO 6: Roof Inspections -->
           <article class="bento-card bento-card-compact cut-card">
             <div class="bento-icon-wrapper" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
             </div>
             <h3 class="bento-compact-title">Roof Inspections</h3>
             <p class="bento-compact-text">Multi-point physical attic and surface evaluation assessing valley integrity, fascia condition, and structural moisture levels.</p>
             <button type="button" class="service-link-btn text-dark-btn open-modal-trigger" data-service="Roof Inspections">
               <span>Book Inspection</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- STORM BAND SECTION: PHOTO 4 (forth.avif) Parallax -->
+    <!-- STORM BAND SECTION: PHOTO 4 (forth.avif) -->
     <section class="storm-band-section" aria-label="North Texas Storm Season Advisory">
       <div class="storm-bg-wrapper">
         <img
@@ -385,7 +403,7 @@
       </div>
     </section>
 
-    <!-- SECTION 5: Instant Estimate Calculator -->
+    <!-- SECTION 5: Instant Estimate Calculator (Fixed Clean Layout, Zero Collision) -->
     <section class="section estimate-section dark-theme pitch-divider-top" id="estimate" aria-labelledby="estimate-heading">
       <div class="container">
         <div class="estimate-box cut-card">
@@ -432,18 +450,26 @@
               </div>
             </div>
 
+            <!-- Clean, Separated Price Box so numbers NEVER overlap -->
             <div class="calculator-output cut-card">
               <span class="output-eyebrow">Estimated Project Bracket</span>
+              
               <div class="price-range-wrapper" aria-live="polite">
-                <span class="price-currency">$</span>
-                <span class="price-val" id="price-low">13,200</span>
-                <span class="price-separator">–</span>
-                <span class="price-currency">$</span>
-                <span class="price-val" id="price-high">18,000</span>
+                <div class="price-val-block">
+                  <span class="price-currency">$</span>
+                  <span class="price-val" id="price-low">13,200</span>
+                </div>
+                <span class="price-separator">TO</span>
+                <div class="price-val-block">
+                  <span class="price-currency">$</span>
+                  <span class="price-val" id="price-high">18,000</span>
+                </div>
               </div>
+
               <p class="estimate-disclaimer">Estimate only. Final price after a free inspection.</p>
+              
               <button type="button" class="btn btn-primary btn-block open-modal-trigger" data-service="Roof Replacement">
-                <span>Lock In Inspection &amp; Exact Quote</span>
+                <span>Lock In Inspection Quote</span>
               </button>
             </div>
           </div>
@@ -877,7 +903,7 @@
         <div class="footer-brand-col">
           <a href="#hero" class="brand-logo footer-logo" aria-label="Ironcrest Roofing and Restoration Home">
             <span class="brand-crest">
-              <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 32 32" fill="none" aria-hidden="true">
                 <polygon points="16,2 30,12 26,12 26,28 6,28 6,12 2,12" fill="#F97316"/>
                 <polygon points="16,8 24,14 22,14 22,24 10,24 10,14 8,14" fill="#111827"/>
                 <line x1="16" y1="12" x2="16" y2="24" stroke="#F97316" stroke-width="2.5"/>
