@@ -1,6 +1,6 @@
 /**
  * IRONCREST ROOFING & RESTORATION - CORE CLIENT SCRIPT
- * Dallas, TX | Agency Motion System & Production Logic
+ * Dallas, TX | Agency Motion Engine & Client Experience
  */
 
 'use strict';
@@ -52,7 +52,7 @@ const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 
 function initSmoothScroll() {
   if (isReducedMotion) return;
 
-  // On touch devices, preserve native responsive inertia scrolling
+  // Preserve native responsive inertia scrolling on touch devices
   if (typeof Lenis !== 'undefined' && !isTouchDevice) {
     lenis = new Lenis({
       duration: 1.15,
@@ -125,7 +125,7 @@ function initHeaderAndProgress() {
 }
 
 /* ==========================================================================
-   4. GSAP ENTRANCE ANIMATIONS & REVEALS
+   4. GSAP ENTRANCE ANIMATIONS & PARALLAX REVEALS
    ========================================================================== */
 function initGsapAnimations() {
   if (isReducedMotion || typeof gsap === 'undefined') {
@@ -152,14 +152,14 @@ function initGsapAnimations() {
     });
   }
 
-  // Hero Subtext, CTA and Badges
-  gsap.from(['.hero-badge', '.hero-lead', '.hero-cta-group'], {
-    y: 25,
+  // Hero Subtext, CTA and Glass Quick Card
+  gsap.from(['.hero-badge', '.hero-lead', '.hero-cta-group', '.hero-glass-card'], {
+    y: 28,
     opacity: 0,
     duration: 0.9,
-    stagger: 0.12,
+    stagger: 0.1,
     ease: 'expo.out',
-    delay: 0.55
+    delay: 0.5
   });
 
   // Hero Image Subtle Parallax (Max 8%)
@@ -200,7 +200,7 @@ function initGsapAnimations() {
     });
   });
 
-  // Section Headers: Clip-Path Reveal
+  // Section Headers Reveal
   gsap.utils.toArray('.section-header').forEach((header) => {
     gsap.from(header, {
       scrollTrigger: {
@@ -215,12 +215,12 @@ function initGsapAnimations() {
     });
   });
 
-  // Services Grid: Diagonal Image Clip & Card Stagger
-  const serviceCards = document.querySelectorAll('.service-card');
-  if (serviceCards.length > 0) {
-    gsap.from(serviceCards, {
+  // Services Bento Cards Stagger
+  const bentoCards = document.querySelectorAll('.bento-card');
+  if (bentoCards.length > 0) {
+    gsap.from(bentoCards, {
       scrollTrigger: {
-        trigger: '.services-grid',
+        trigger: '.services-bento',
         start: 'top 80%',
         once: true
       },
@@ -232,7 +232,22 @@ function initGsapAnimations() {
     });
   }
 
-  // Process Steps: Sequential Reveal
+  // Storm Band Parallax Background (Transform Only)
+  const stormBg = document.querySelector('.storm-bg-img');
+  if (stormBg) {
+    gsap.to(stormBg, {
+      yPercent: 12,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '.storm-band-section',
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: true
+      }
+    });
+  }
+
+  // Process Steps Reveal
   const processSteps = document.querySelectorAll('.process-step');
   if (processSteps.length > 0) {
     gsap.from(processSteps, {
@@ -249,7 +264,7 @@ function initGsapAnimations() {
     });
   }
 
-  // Showcase Cards: Stagger
+  // Showcase Cards Stagger
   const projectCards = document.querySelectorAll('.project-card');
   if (projectCards.length > 0) {
     gsap.from(projectCards, {
@@ -266,7 +281,7 @@ function initGsapAnimations() {
     });
   }
 
-  // Area Cards: Stagger
+  // Area Cards Stagger
   const areaCards = document.querySelectorAll('.area-card');
   if (areaCards.length > 0) {
     gsap.from(areaCards, {
@@ -283,7 +298,7 @@ function initGsapAnimations() {
     });
   }
 
-  // Reviews Cards: Stagger
+  // Reviews Cards Stagger
   const reviewCards = document.querySelectorAll('.review-card');
   if (reviewCards.length > 0) {
     gsap.from(reviewCards, {
@@ -387,40 +402,50 @@ function initEstimateCalculator() {
 }
 
 /* ==========================================================================
-   7. BEFORE/AFTER PROJECT COMPARISON SLIDERS (MOUSE + TOUCH + KEYBOARD ARROWS)
+   7. BEFORE/AFTER PROJECT COMPARISON SLIDERS (BUG 3 REBUILD)
    ========================================================================== */
 function initComparisonSliders() {
   const sliders = document.querySelectorAll('.comparison-container');
 
   sliders.forEach((container) => {
-    const beforeImage = container.querySelector('.before-image');
+    const afterImage = container.querySelector('.after-image');
     const divider = container.querySelector('.slider-divider');
     let isDragging = false;
+    let rafId = null;
 
-    function setSliderPosition(percentage) {
+    function applyPosition(percentage) {
       const clamped = Math.max(0, Math.min(100, percentage));
-      if (beforeImage) beforeImage.style.width = `${clamped}%`;
-      if (divider) divider.style.left = `${clamped}%`;
+      if (afterImage) {
+        afterImage.style.clipPath = `inset(0 0 0 ${clamped}%)`;
+      }
+      if (divider) {
+        divider.style.left = `${clamped}%`;
+      }
       container.setAttribute('aria-valuenow', String(Math.round(clamped)));
     }
 
-    function calculatePosition(clientX) {
-      const rect = container.getBoundingClientRect();
-      const offsetX = clientX - rect.left;
-      const percentage = (offsetX / rect.width) * 100;
-      setSliderPosition(percentage);
+    function schedulePositionUpdate(clientX) {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        const rect = container.getBoundingClientRect();
+        const offsetX = clientX - rect.left;
+        const percentage = (offsetX / rect.width) * 100;
+        applyPosition(percentage);
+      });
     }
 
-    // Pointer events for smooth mouse and touch tracking
+    // Pointer events on container (handles click/tap jump & smooth dragging)
     container.addEventListener('pointerdown', (e) => {
       isDragging = true;
-      container.setPointerCapture(e.pointerId);
-      calculatePosition(e.clientX);
+      try {
+        container.setPointerCapture(e.pointerId);
+      } catch (_) {}
+      schedulePositionUpdate(e.clientX);
     });
 
     container.addEventListener('pointermove', (e) => {
       if (!isDragging) return;
-      calculatePosition(e.clientX);
+      schedulePositionUpdate(e.clientX);
     });
 
     const stopDragging = (e) => {
@@ -435,28 +460,31 @@ function initComparisonSliders() {
     container.addEventListener('pointerup', stopDragging);
     container.addEventListener('pointercancel', stopDragging);
 
-    // Keyboard navigation (ArrowLeft & ArrowRight with 5% increments)
+    // Accessible keyboard control (ArrowLeft/ArrowRight in 5% increments, Home/End)
     container.addEventListener('keydown', (e) => {
       const current = parseFloat(container.getAttribute('aria-valuenow') || '50');
       if (e.key === 'ArrowLeft') {
         e.preventDefault();
-        setSliderPosition(current - 5);
+        applyPosition(current - 5);
       } else if (e.key === 'ArrowRight') {
         e.preventDefault();
-        setSliderPosition(current + 5);
+        applyPosition(current + 5);
       } else if (e.key === 'Home') {
         e.preventDefault();
-        setSliderPosition(0);
+        applyPosition(0);
       } else if (e.key === 'End') {
         e.preventDefault();
-        setSliderPosition(100);
+        applyPosition(100);
       }
     });
+
+    // Start handle firmly at 50%
+    applyPosition(50);
   });
 }
 
 /* ==========================================================================
-   8. FAQ ACCORDION (ONLY ONE OPEN AT A TIME, SMOOTH GRID-ROW EXPANSION)
+   8. FAQ ACCORDION (BUG 2 REBUILD: ITEM 1 OPEN, KEYBOARD + CLICK HANDLERS)
    ========================================================================== */
 function initFaqAccordion() {
   const accordionItems = document.querySelectorAll('.accordion-item');
@@ -465,20 +493,30 @@ function initFaqAccordion() {
     const trigger = item.querySelector('.accordion-trigger');
     if (!trigger) return;
 
-    trigger.addEventListener('click', () => {
-      const isOpen = item.classList.contains('open');
+    function toggleAccordion() {
+      const isAlreadyOpen = item.classList.contains('open');
 
-      // Close all accordion siblings
+      // Close all accordion siblings (strict single open mode)
       accordionItems.forEach((sibling) => {
         sibling.classList.remove('open');
         const sibTrigger = sibling.querySelector('.accordion-trigger');
         if (sibTrigger) sibTrigger.setAttribute('aria-expanded', 'false');
       });
 
-      // If it wasn't open previously, open it
-      if (!isOpen) {
+      // Toggle target item
+      if (!isAlreadyOpen) {
         item.classList.add('open');
         trigger.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    trigger.addEventListener('click', toggleAccordion);
+
+    // Keyboard support: Enter and Spacebar
+    trigger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleAccordion();
       }
     });
   });
@@ -545,7 +583,7 @@ function initBookingModal() {
     modalBackdrop.classList.add('modal-open');
     modalBackdrop.setAttribute('aria-hidden', 'false');
 
-    // Focus first focusable item
+    // Focus first interactive control
     setTimeout(() => {
       const firstFocusable = modalDialog.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
       if (firstFocusable) firstFocusable.focus();
@@ -663,7 +701,7 @@ function initBookingModal() {
     return isValid;
   }
 
-  // Final Form Submission
+  // Final Form Submission Handler
   if (bookingForm) {
     bookingForm.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -680,7 +718,7 @@ function initBookingModal() {
 
       let isValid = true;
 
-      // Name validation
+      // Full Name validation
       if (!nameInput.value.trim()) {
         nameField.classList.add('has-error');
         isValid = false;
@@ -778,7 +816,7 @@ function initBookingModal() {
     if (confirmService) confirmService.textContent = data.service;
     if (confirmZip) confirmZip.textContent = data.zip;
 
-    // Clean Date Formatting e.g. "October 15, 2026 · Morning, 8:30 AM"
+    // Clean Date Formatting e.g. "October 15, 2026 • Morning, 8:30 AM"
     if (confirmSchedule && data.date) {
       const parts = data.date.split('-');
       if (parts.length === 3) {
@@ -804,7 +842,34 @@ function initBookingModal() {
 }
 
 /* ==========================================================================
-   10. FOOTER COPYRIGHT YEAR INITIALIZATION
+   10. MOBILE SIDEWAYS OVERFLOW AUDIT CHECKER (BUG 1 FIX EVIDENCE)
+   ========================================================================== */
+function debugViewportOverflow() {
+  const docWidth = document.documentElement.clientWidth;
+  const overflowingElements = [];
+
+  document.querySelectorAll('body *').forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.right > docWidth + 1 || rect.left < -1) {
+      overflowingElements.push({
+        element: el,
+        tagName: el.tagName,
+        className: el.className,
+        right: Math.round(rect.right),
+        docWidth: docWidth
+      });
+    }
+  });
+
+  if (overflowingElements.length > 0) {
+    console.warn('[Ironcrest Debug] Viewport overflow detected on:', overflowingElements);
+  } else {
+    console.log('[Ironcrest Debug] Zero horizontal overflow detected. Exact viewport fit.');
+  }
+}
+
+/* ==========================================================================
+   11. FOOTER COPYRIGHT YEAR INITIALIZATION
    ========================================================================== */
 function initFooterYear() {
   const yearEl = document.getElementById('current-year');
@@ -826,4 +891,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initBookingModal();
   initFooterYear();
+  debugViewportOverflow();
+  window.addEventListener('resize', debugViewportOverflow, { passive: true });
 });
