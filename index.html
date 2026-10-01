@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Ironcrest Roofing &amp; Restoration | Dallas, TX Roof Inspections &amp; Installation</title>
-  <meta name="description" content="Professional residential and commercial roofing in Dallas, Plano, Frisco, Irving, and Arlington. Schedule a free roof inspection with Ironcrest Roofing &amp; Restoration.">
+  <title>Ironcrest Roofing &amp; Restoration | Dallas, TX High-Performance Roofing</title>
+  <meta name="description" content="Commercial &amp; residential roofing restoration across Dallas, Plano, Frisco, Irving, and Arlington. Built for North Texas hail seasons.">
 
-  <!-- Google Fonts Preconnect & Styles -->
+  <!-- Direct Embedded High-Resolution Branded Favicon (Replaces Default Browser Globe) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,2 30,12 26,12 26,28 6,28 6,12 2,12' fill='%23F97316'/%3E%3Cpolygon points='16,8 24,14 22,14 22,24 10,24 10,14 8,14' fill='%23111827'/%3E%3Cline x1='16' y1='12' x2='16' y2='24' stroke='%23F97316' stroke-width='2.5'/%3E%3C/svg%3E">
+
+  <!-- Agency-Grade Fonts: Teko (Aggressive Display), Barlow Condensed (Heavyweight Industrial), Plus Jakarta Sans (Modern Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Teko:wght@600;700&display=swap" rel="stylesheet">
 
   <!-- External CDNs: Lenis, GSAP, ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.18/lenis.min.js"></script>
@@ -90,22 +93,24 @@
 
   <main id="main-content">
 
-    <!-- SECTION 2: Hero Section (IMAGE 1: Luxury Brick Home with Shingle Roof) -->
+    <!-- SECTION 2: Hero Section (PHOTO 1: first.avif) -->
     <section class="hero-section" id="hero" aria-labelledby="hero-title">
       <div class="hero-bg-wrapper">
         <img
-          src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=75"
+          src="first.avif"
           alt="Architectural roof installation on luxury brick home in Dallas Fort Worth"
           class="hero-bg-img"
-          width="1600"
-          height="900"
+          width="1920"
+          height="1080"
           fetchpriority="high"
+          onerror="this.parentElement.classList.add('img-fallback');"
         >
         <div class="hero-overlay"></div>
       </div>
 
       <div class="container hero-container">
         <div class="hero-layout">
+          <!-- Left Hero Column -->
           <div class="hero-content">
             <div class="hero-badge">
               <span class="badge-dot" aria-hidden="true"></span>
@@ -158,6 +163,7 @@
             </div>
           </div>
 
+          <!-- Right Hero Column: Compact Glass Quick Booking Card -->
           <div class="hero-glass-card cut-card">
             <div class="glass-header">
               <span class="glass-tag">DIRECT INSPECTION DESK</span>
@@ -180,7 +186,7 @@
       </div>
     </section>
 
-    <!-- SECTION 3: Services Section (IMAGES 2, 3, 4) -->
+    <!-- SECTION 3: Services Bento Grid (PHOTOS 2, 3, 4) -->
     <section class="section services-section light-theme pitch-divider-top" id="services" aria-labelledby="services-heading">
       <div class="container">
         <div class="section-header">
@@ -190,16 +196,17 @@
         </div>
 
         <div class="services-bento">
-          <!-- BENTO 1: IMAGE 2 (Roofer Sealing Asphalt Shingles) -->
+          <!-- BENTO 1: PHOTO 2 (second.avif) -->
           <article class="bento-card bento-card-photo cut-card">
             <img
-              src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1000&q=75"
+              src="second.avif"
               alt="Roofing technician inspecting shingle fasteners on steep pitch roof"
               class="bento-bg-img"
               width="1000"
               height="650"
               loading="lazy"
               decoding="async"
+              onerror="this.parentElement.classList.add('img-fallback');"
             >
             <div class="bento-photo-overlay"></div>
             <div class="bento-card-content">
@@ -213,16 +220,17 @@
             </div>
           </article>
 
-          <!-- BENTO 2: IMAGE 3 (Workers on Architectural Roof) -->
+          <!-- BENTO 2: PHOTO 3 (third.avif) -->
           <article class="bento-card bento-card-photo cut-card">
             <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=75"
+              src="third.avif"
               alt="Workers laying commercial tile underlayment across architectural rooftop"
               class="bento-bg-img"
               width="1000"
               height="650"
               loading="lazy"
               decoding="async"
+              onerror="this.parentElement.classList.add('img-fallback');"
             >
             <div class="bento-photo-overlay"></div>
             <div class="bento-card-content">
@@ -236,16 +244,17 @@
             </div>
           </article>
 
-          <!-- BENTO 3: IMAGE 4 (Suburban House Restored) -->
+          <!-- BENTO 3: PHOTO 4 (forth.avif) -->
           <article class="bento-card bento-card-photo cut-card">
             <img
-              src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1000&q=75"
+              src="forth.avif"
               alt="Suburban residential home under clear sky after comprehensive roof restoration"
               class="bento-bg-img"
               width="1000"
               height="650"
               loading="lazy"
               decoding="async"
+              onerror="this.parentElement.classList.add('img-fallback');"
             >
             <div class="bento-photo-overlay"></div>
             <div class="bento-card-content">
@@ -301,17 +310,18 @@
       </div>
     </section>
 
-    <!-- STORM BAND SECTION: IMAGE 6 (Storm Sunset Silhouette) -->
+    <!-- STORM BAND SECTION: PHOTO 4 (forth.avif) Parallax -->
     <section class="storm-band-section" aria-label="North Texas Storm Season Advisory">
       <div class="storm-bg-wrapper">
         <img
-          src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=1600&q=75"
-          alt="Storm clouds over Texas residential roofline"
+          src="forth.avif"
+          alt="North Texas neighborhood residential architecture"
           class="storm-bg-img"
           width="1600"
           height="700"
           loading="lazy"
           decoding="async"
+          onerror="this.parentElement.classList.add('img-fallback');"
         >
         <div class="storm-overlay"></div>
       </div>
@@ -441,7 +451,7 @@
       </div>
     </section>
 
-    <!-- SECTION 6: Project Showcase (IMAGES 5, 7, 8 in Before/After Sliders) -->
+    <!-- SECTION 6: Project Showcase (PHOTOS 5, 6, 7) -->
     <section class="section showcase-section dark-theme" id="projects" aria-labelledby="showcase-heading">
       <div class="container">
         <div class="section-header">
@@ -451,7 +461,7 @@
         </div>
 
         <div class="showcase-grid">
-          <!-- Slider 1: Plano (IMAGE 5: Standing Seam Metal Roof) -->
+          <!-- Slider 1: Plano (PHOTO 5: fifth.avif) -->
           <article class="project-card cut-card">
             <div class="project-header">
               <h3 class="project-city">Plano Project</h3>
@@ -469,7 +479,7 @@
             >
               <div class="image-wrapper before-image">
                 <img
-                  src="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1000&q=75"
+                  src="fifth.avif"
                   alt="Plano residential roof weathered condition prior to repair"
                   width="1000"
                   height="650"
@@ -477,18 +487,20 @@
                   decoding="async"
                   draggable="false"
                   class="filtered-before"
+                  onerror="this.parentElement.classList.add('img-fallback');"
                 >
                 <span class="badge-label badge-before">Before</span>
               </div>
               <div class="image-wrapper after-image" style="clip-path: inset(0 0 0 50%);">
                 <img
-                  src="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1000&q=75"
+                  src="fifth.avif"
                   alt="Plano restored residential roof after installation"
                   width="1000"
                   height="650"
                   loading="lazy"
                   decoding="async"
                   draggable="false"
+                  onerror="this.parentElement.classList.add('img-fallback');"
                 >
                 <span class="badge-label badge-after">After</span>
               </div>
@@ -502,11 +514,11 @@
             <p class="project-desc">Hail impact restoration featuring wind-rated Class 4 shingles and enhanced ridge ventilation.</p>
           </article>
 
-          <!-- Slider 2: Frisco (IMAGE 7: Drone View Residential Community) -->
+          <!-- Slider 2: Frisco (PHOTO 6: sisth.avif) -->
           <article class="project-card cut-card">
             <div class="project-header">
               <h3 class="project-city">Frisco Project</h3>
-              <span class="project-tag">Full Shingle Upgrade</span>
+              <span class="project-tag">Storm Fortified System</span>
             </div>
             <div
               class="comparison-container"
@@ -520,26 +532,28 @@
             >
               <div class="image-wrapper before-image">
                 <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=75"
-                  alt="Frisco roof aged shingles prior to replacement"
+                  src="sisth.avif"
+                  alt="Frisco roof aged shingles prior to metal installation"
                   width="1000"
                   height="650"
                   loading="lazy"
                   decoding="async"
                   draggable="false"
                   class="filtered-before"
+                  onerror="this.parentElement.classList.add('img-fallback');"
                 >
                 <span class="badge-label badge-before">Before</span>
               </div>
               <div class="image-wrapper after-image" style="clip-path: inset(0 0 0 50%);">
                 <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=75"
-                  alt="Frisco modern residential roof after completion"
+                  src="sisth.avif"
+                  alt="Frisco modern standing seam metal roof after completion"
                   width="1000"
                   height="650"
                   loading="lazy"
                   decoding="async"
                   draggable="false"
+                  onerror="this.parentElement.classList.add('img-fallback');"
                 >
                 <span class="badge-label badge-after">After</span>
               </div>
@@ -550,14 +564,14 @@
                 </div>
               </div>
             </div>
-            <p class="project-desc">Conversion from degraded composite shingles to continuous architectural impact panels.</p>
+            <p class="project-desc">Conversion from degraded composite shingles to continuous matte black standing seam panels.</p>
           </article>
 
-          <!-- Slider 3: Irving (IMAGE 8: Top-Down Aerial Roof & Yard) -->
+          <!-- Slider 3: Irving (PHOTO 7: senth.avif) -->
           <article class="project-card cut-card">
             <div class="project-header">
               <h3 class="project-city">Irving Project</h3>
-              <span class="project-tag">Valley &amp; Decking Upgrade</span>
+              <span class="project-tag">Full Valley &amp; Shingle Upgrade</span>
             </div>
             <div
               class="comparison-container"
@@ -571,7 +585,7 @@
             >
               <div class="image-wrapper before-image">
                 <img
-                  src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=75"
+                  src="senth.avif"
                   alt="Irving roof prior to leak mitigation and underlayment overhaul"
                   width="1000"
                   height="650"
@@ -579,18 +593,20 @@
                   decoding="async"
                   draggable="false"
                   class="filtered-before"
+                  onerror="this.parentElement.classList.add('img-fallback');"
                 >
                 <span class="badge-label badge-before">Before</span>
               </div>
               <div class="image-wrapper after-image" style="clip-path: inset(0 0 0 50%);">
                 <img
-                  src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=75"
+                  src="senth.avif"
                   alt="Irving residential roof replacement complete with ice and water shield"
                   width="1000"
                   height="650"
                   loading="lazy"
                   decoding="async"
                   draggable="false"
+                  onerror="this.parentElement.classList.add('img-fallback');"
                 >
                 <span class="badge-label badge-after">After</span>
               </div>
@@ -818,17 +834,18 @@
       </div>
     </section>
 
-    <!-- FINAL CTA BAND SECTION: IMAGE 8 (Aerial Drone Top-Down Roof) -->
+    <!-- FINAL CTA BAND SECTION: PHOTO 8 (last eight.avif) -->
     <section class="final-cta-section" aria-label="Book Final Inspection Assessment">
       <div class="cta-bg-wrapper">
         <img
-          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=75"
+          src="last eight.avif"
           alt="Aerial view of clean residential architectural shingle roof"
           class="cta-bg-img"
           width="1600"
           height="750"
           loading="lazy"
           decoding="async"
+          onerror="this.parentElement.classList.add('img-fallback');"
         >
         <div class="cta-overlay"></div>
       </div>
