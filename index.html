@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ironcrest Roofing &amp; Restoration | Dallas, TX Roof Inspections &amp; Installation</title>
+  <meta name="description" content="Professional residential and commercial roofing in Dallas, Plano, Frisco, Irving, and Arlington. Schedule a free roof inspection with Ironcrest Roofing &amp; Restoration.">
+
+  <!-- Google Fonts Preconnect & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CDNs: Lenis, GSAP, ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.18/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress" class="scroll-progress-bar" aria-hidden="true"></div>
+
+  <!-- SECTION 1: Top Bar & Sticky Navbar -->
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <div class="top-bar-left">
+          <span class="pulse-beacon" aria-hidden="true"></span>
+          <span class="top-bar-notice">DFW Severe Storm &amp; Hail Response Available</span>
+        </div>
+        <div class="top-bar-right">
+          <span class="hours-label">Mon–Sat 7:00 AM – 7:00 PM</span>
+          <span class="divider-dot" aria-hidden="true">•</span>
+          <a href="tel:+12145550187" class="top-phone-link" aria-label="Call Ironcrest Roofing at (214) 555-0187">
+            <svg class="icon-inline" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>(214) 555-0187</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar" id="navbar" aria-label="Main Navigation">
+      <div class="container nav-inner">
+        <a href="#hero" class="brand-logo" aria-label="Ironcrest Roofing and Restoration Home">
+          <span class="brand-crest">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <polygon points="16,2 30,12 26,12 26,28 6,28 6,12 2,12" fill="#F97316"/>
+              <polygon points="16,8 24,14 22,14 22,24 10,24 10,14 8,14" fill="#111827"/>
+              <line x1="16" y1="12" x2="16" y2="24" stroke="#F97316" stroke-width="2.5"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-title">IRONCREST</span>
+            <span class="brand-subtitle">ROOFING &amp; RESTORATION</span>
+          </span>
+        </a>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#how-it-works" class="nav-link">Process</a></li>
+            <li><a href="#estimate" class="nav-link">Calculator</a></li>
+            <li><a href="#projects" class="nav-link">Showcase</a></li>
+            <li><a href="#service-areas" class="nav-link">Areas</a></li>
+            <li><a href="#faq" class="nav-link">FAQ</a></li>
+          </ul>
+          <div class="nav-actions">
+            <a href="tel:+12145550187" class="btn btn-outline nav-phone-btn" aria-label="Call (214) 555-0187">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>(214) 555-0187</span>
+            </a>
+            <button type="button" class="btn btn-primary nav-cta-btn open-modal-trigger" data-service="Roof Replacement">
+              <span>Free Inspection</span>
+            </button>
+          </div>
+        </div>
+
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar bar-1"></span>
+          <span class="hamburger-bar bar-2"></span>
+          <span class="hamburger-bar bar-3"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- SECTION 2: Hero Section -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-title">
+      <div class="hero-bg-wrapper">
+        <img
+          src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1920&q=80"
+          alt="Residential roof installation completed in North Texas neighborhood"
+          class="hero-bg-img"
+          width="1920"
+          height="1080"
+          onerror="this.parentElement.classList.add('img-fallback');"
+        >
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            <span>Serving Dallas &amp; North Texas Metroplex</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-title">
+            <span class="hero-line"><span class="hero-word">PRECISION</span> <span class="hero-word">ROOFING</span></span>
+            <span class="hero-line"><span class="hero-word highlight-word">BUILT FOR TEXAS</span></span>
+            <span class="hero-line"><span class="hero-word">STORM SEASONS.</span></span>
+          </h1>
+
+          <p class="hero-lead">
+            Certified residential &amp; commercial roof restoration engineered for severe weather, hail impact, and intense Texas heat. Warranty-backed workmanship with transparent pricing.
+          </p>
+
+          <div class="hero-cta-group">
+            <button type="button" class="btn btn-primary btn-lg open-modal-trigger magnetic-btn" data-service="Roof Replacement">
+              <span>Get a Free Roof Inspection</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <a href="tel:+12145550187" class="btn btn-secondary btn-lg magnetic-btn" aria-label="Call our Dallas roof emergency team directly">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Call (214) 555-0187</span>
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-card">
+              <div class="stat-number-wrapper">
+                <span class="stat-number counter" data-target="1840">0</span>
+                <span class="stat-plus">+</span>
+              </div>
+              <p class="stat-label">DFW Roofs Inspected</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number-wrapper">
+                <span class="stat-number counter" data-target="15">0</span>
+                <span class="stat-plus">Yrs</span>
+              </div>
+              <p class="stat-label">North Texas Experience</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number-wrapper">
+                <span class="stat-number counter" data-target="48">0</span>
+                <span class="stat-plus">Hr</span>
+              </div>
+              <p class="stat-label">Avg Inspection Delivery</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Services Grid (6 Cards) -->
+    <section class="section services-section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">ENGINEERED RESTORATION</p>
+          <h2 class="section-title" id="services-heading">FULL-SPECTRUM ROOFING SOLUTIONS</h2>
+          <p class="section-subtitle">From hail assessment to complete architectural re-roofs, every project adheres to strict Texas building safety standards.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <article class="service-card cut-card">
+            <div class="service-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=700&q=80"
+                alt="Architectural roof shingle replacement on two-story home"
+                class="service-img"
+                width="700"
+                height="450"
+                loading="lazy"
+                decoding="async"
+                onerror="this.parentElement.classList.add('img-fallback');"
+              >
+              <span class="service-number">01</span>
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Roof Replacement</h3>
+              <p class="service-text">Complete tear-off and installation of high-impact asphalt shingle systems designed to withstand heavy thermal expansion and gale winds.</p>
+              <button type="button" class="service-btn open-modal-trigger" data-service="Roof Replacement">
+                <span>Request Scope</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="service-card cut-card">
+            <div class="service-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1505705694340-019e1e335916?auto=format&fit=crop&w=700&q=80"
+                alt="Contractor repairing flashing around residential roof chimney"
+                class="service-img"
+                width="700"
+                height="450"
+                loading="lazy"
+                decoding="async"
+                onerror="this.parentElement.classList.add('img-fallback');"
+              >
+              <span class="service-number">02</span>
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Roof Repair</h3>
+              <p class="service-text">Targeted leak investigations, pipe boot replacements, and flashing reinforcement to stop moisture penetration before framing rot sets in.</p>
+              <button type="button" class="service-btn open-modal-trigger" data-service="Roof Repair">
+                <span>Request Scope</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="service-card cut-card">
+            <div class="service-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=700&q=80"
+                alt="Storm hail damage inspection on residential roof shingles"
+                class="service-img"
+                width="700"
+                height="450"
+                loading="lazy"
+                decoding="async"
+                onerror="this.parentElement.classList.add('img-fallback');"
+              >
+              <span class="service-number">03</span>
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Storm &amp; Hail Damage</h3>
+              <p class="service-text">Thorough post-storm forensic assessments. We provide itemized photo dossiers and detailed reports to assist your insurance documentation.</p>
+              <button type="button" class="service-btn open-modal-trigger" data-service="Storm and Hail Damage">
+                <span>Request Scope</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="service-card cut-card">
+            <div class="service-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80"
+                alt="Modern standing seam architectural metal roof installation"
+                class="service-img"
+                width="700"
+                height="450"
+                loading="lazy"
+                decoding="async"
+                onerror="this.parentElement.classList.add('img-fallback');"
+              >
+              <span class="service-number">04</span>
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Metal Roofing</h3>
+              <p class="service-text">Commercial-grade standing seam and interlocking steel panels designed for maximum energy efficiency, fire rating, and wind uplift resistance.</p>
+              <button type="button" class="service-btn open-modal-trigger" data-service="Metal Roofing">
+                <span>Request Scope</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="service-card cut-card">
+            <div class="service-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?auto=format&fit=crop&w=700&q=80"
+                alt="Seamless gutter installation and commercial downspout drainage"
+                class="service-img"
+                width="700"
+                height="450"
+                loading="lazy"
+                decoding="async"
+                onerror="this.parentElement.classList.add('img-fallback');"
+              >
+              <span class="service-number">05</span>
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Gutters &amp; Drainage</h3>
+              <p class="service-text">Custom seamless aluminum gutters, leaf screens, and oversized downspouts engineered to route torrential North Texas downpours away from foundations.</p>
+              <button type="button" class="service-btn open-modal-trigger" data-service="Gutters and Drainage">
+                <span>Request Scope</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="service-card cut-card">
+            <div class="service-img-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80"
+                alt="Professional roof inspector documenting condition of attic ventilation"
+                class="service-img"
+                width="700"
+                height="450"
+                loading="lazy"
+                decoding="async"
+                onerror="this.parentElement.classList.add('img-fallback');"
+              >
+              <span class="service-number">06</span>
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Roof Inspections</h3>
+              <p class="service-text">Multi-point diagnostic evaluation covering decking, underlayment, attic ventilation, soffits, and thermal loss points with a zero-obligation report.</p>
+              <button type="button" class="service-btn open-modal-trigger" data-service="Roof Inspections">
+                <span>Request Scope</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: How It Works (3 Steps) -->
+    <section class="section process-section" id="how-it-works" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">STRUCTURED EXECUTION</p>
+          <h2 class="section-title" id="process-heading">HOW IRONCREST DELIVERS</h2>
+          <p class="section-subtitle">A straightforward three-step process built on transparency, prompt documentation, and thorough cleanup.</p>
+        </div>
+
+        <div class="process-timeline">
+          <div class="process-step">
+            <div class="step-badge">
+              <span class="step-num">01</span>
+            </div>
+            <div class="step-content cut-card">
+              <h3 class="step-title">Free On-Site Inspection</h3>
+              <p class="step-text">Our certified roofing specialist conducts a physical roof evaluation, checking shingle adhesion, valleys, and flashing points before providing high-res photographic findings.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-badge">
+              <span class="step-num">02</span>
+            </div>
+            <div class="step-content cut-card">
+              <h3 class="step-title">Transparent Scope &amp; Pricing</h3>
+              <p class="step-text">You receive an itemized quote detailing exact manufacturer materials, underlayment grades, ventilation additions, and work schedules with no surprise hidden fees.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-badge">
+              <span class="step-num">03</span>
+            </div>
+            <div class="step-content cut-card">
+              <h3 class="step-title">Installation &amp; Magnetic Sweep</h3>
+              <p class="step-text">Our crew completes the build to code, followed by a multi-pass magnetic roller sweep of your driveway and flowerbeds to capture every loose fastener.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Instant Estimate Calculator -->
+    <section class="section estimate-section" id="estimate" aria-labelledby="estimate-heading">
+      <div class="container">
+        <div class="estimate-box cut-card">
+          <div class="section-header estimate-header">
+            <p class="section-tag">ONLINE PROJECT PLANNER</p>
+            <h2 class="section-title" id="estimate-heading">INSTANT ROOF ESTIMATE CALCULATOR</h2>
+            <p class="section-subtitle">Adjust your property footprint and preferred material to generate a realistic local cost range for the Dallas-Fort Worth market.</p>
+          </div>
+
+          <div class="calculator-grid">
+            <div class="calculator-controls">
+              <!-- Slider Control -->
+              <div class="control-group">
+                <div class="control-header">
+                  <label for="roof-size-slider" class="control-label">Estimated Roof Surface (Sq Ft)</label>
+                  <span class="control-value-badge" id="roof-size-display">2,400 sq ft</span>
+                </div>
+                <input
+                  type="range"
+                  id="roof-size-slider"
+                  min="1000"
+                  max="4000"
+                  step="100"
+                  value="2400"
+                  class="calc-slider"
+                  aria-describedby="size-hint"
+                >
+                <div class="slider-scale" id="size-hint">
+                  <span>1,000 sq ft</span>
+                  <span>2,500 sq ft</span>
+                  <span>4,000 sq ft</span>
+                </div>
+              </div>
+
+              <!-- Material Control -->
+              <div class="control-group">
+                <label for="material-select" class="control-label">Select Roofing Material</label>
+                <div class="select-wrapper">
+                  <select id="material-select" class="calc-select">
+                    <option value="asphalt">Architectural Asphalt Shingles ($5.50 – $7.50 / sq ft)</option>
+                    <option value="metal">Standing Seam Metal Roofing ($10.00 – $14.00 / sq ft)</option>
+                    <option value="tile">Concrete / Spanish Clay Tile ($12.00 – $18.00 / sq ft)</option>
+                  </select>
+                  <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Calculation Output Display -->
+            <div class="calculator-output cut-card">
+              <span class="output-eyebrow">Estimated Project Bracket</span>
+              <div class="price-range-wrapper" aria-live="polite">
+                <span class="price-currency">$</span>
+                <span class="price-val" id="price-low">13,200</span>
+                <span class="price-separator">–</span>
+                <span class="price-currency">$</span>
+                <span class="price-val" id="price-high">18,000</span>
+              </div>
+              <p class="estimate-disclaimer">Estimate only. Final price after a free inspection.</p>
+              <button type="button" class="btn btn-primary btn-block open-modal-trigger" data-service="Roof Replacement">
+                <span>Lock In Inspection &amp; Exact Quote</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Project Showcase (3 Before/After Sliders) -->
+    <section class="section showcase-section" id="projects" aria-labelledby="showcase-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">VERIFIABLE TRANSFORMATIONS</p>
+          <h2 class="section-title" id="showcase-heading">RECENT DFW ROOF RESTORATIONS</h2>
+          <p class="section-subtitle">Drag the center slider or use your keyboard arrows (Left/Right) to compare storm-weathered roofs with our completed installations.</p>
+        </div>
+
+        <div class="showcase-grid">
+          <!-- Slider 1: Plano -->
+          <article class="project-card cut-card">
+            <div class="project-header">
+              <h3 class="project-city">Plano Project</h3>
+              <span class="project-tag">Architectural Shingles</span>
+            </div>
+            <div
+              class="comparison-container"
+              data-slider-id="plano"
+              role="slider"
+              tabindex="0"
+              aria-label="Plano project before and after comparison"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="50"
+            >
+              <div class="image-wrapper after-image">
+                <img
+                  src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+                  alt="Plano restored residential roof after installation"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.parentElement.classList.add('img-fallback');"
+                >
+                <span class="badge-label badge-after">After</span>
+              </div>
+              <div class="image-wrapper before-image" style="width: 50%;">
+                <img
+                  src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+                  alt="Plano residential roof weathered condition prior to repair"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                  class="filtered-before"
+                  onerror="this.parentElement.classList.add('img-fallback');"
+                >
+                <span class="badge-label badge-before">Before</span>
+              </div>
+              <div class="slider-divider" style="left: 50%;">
+                <div class="slider-handle" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+              </div>
+            </div>
+            <p class="project-desc">Hail impact restoration featuring wind-rated Class 4 shingles and enhanced ridge ventilation.</p>
+          </article>
+
+          <!-- Slider 2: Frisco -->
+          <article class="project-card cut-card">
+            <div class="project-header">
+              <h3 class="project-city">Frisco Project</h3>
+              <span class="project-tag">Standing Seam Metal</span>
+            </div>
+            <div
+              class="comparison-container"
+              data-slider-id="frisco"
+              role="slider"
+              tabindex="0"
+              aria-label="Frisco project before and after comparison"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="50"
+            >
+              <div class="image-wrapper after-image">
+                <img
+                  src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80"
+                  alt="Frisco modern standing seam metal roof after completion"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.parentElement.classList.add('img-fallback');"
+                >
+                <span class="badge-label badge-after">After</span>
+              </div>
+              <div class="image-wrapper before-image" style="width: 50%;">
+                <img
+                  src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80"
+                  alt="Frisco roof aged shingles prior to metal installation"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                  class="filtered-before"
+                  onerror="this.parentElement.classList.add('img-fallback');"
+                >
+                <span class="badge-label badge-before">Before</span>
+              </div>
+              <div class="slider-divider" style="left: 50%;">
+                <div class="slider-handle" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+              </div>
+            </div>
+            <p class="project-desc">Conversion from degraded composite shingles to continuous matte black standing seam panels.</p>
+          </article>
+
+          <!-- Slider 3: Irving -->
+          <article class="project-card cut-card">
+            <div class="project-header">
+              <h3 class="project-city">Irving Project</h3>
+              <span class="project-tag">Full Valley &amp; Shingle Upgrade</span>
+            </div>
+            <div
+              class="comparison-container"
+              data-slider-id="irving"
+              role="slider"
+              tabindex="0"
+              aria-label="Irving project before and after comparison"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="50"
+            >
+              <div class="image-wrapper after-image">
+                <img
+                  src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80"
+                  alt="Irving residential roof replacement complete with ice and water shield"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                  onerror="this.parentElement.classList.add('img-fallback');"
+                >
+                <span class="badge-label badge-after">After</span>
+              </div>
+              <div class="image-wrapper before-image" style="width: 50%;">
+                <img
+                  src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=800&q=80"
+                  alt="Irving roof prior to leak mitigation and underlayment overhaul"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                  decoding="async"
+                  class="filtered-before"
+                  onerror="this.parentElement.classList.add('img-fallback');"
+                >
+                <span class="badge-label badge-before">Before</span>
+              </div>
+              <div class="slider-divider" style="left: 50%;">
+                <div class="slider-handle" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+              </div>
+            </div>
+            <p class="project-desc">Water infiltration repair around chimney intersections with new step flashing and drip edges.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: Service Areas (5 Cities) -->
+    <section class="section areas-section" id="service-areas" aria-labelledby="areas-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">REGIONAL DEPLOYMENT</p>
+          <h2 class="section-title" id="areas-heading">SERVING NORTH TEXAS METROPLEX</h2>
+          <p class="section-subtitle">Local inspection teams stationed for rapid dispatch across key Dallas-Fort Worth communities.</p>
+        </div>
+
+        <div class="areas-grid">
+          <div class="area-card cut-card">
+            <div class="area-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <h3 class="area-name">Dallas</h3>
+            <p class="area-details">Central Dallas, Lakewood, Oak Lawn, Preston Hollow &amp; surrounding zip codes.</p>
+          </div>
+
+          <div class="area-card cut-card">
+            <div class="area-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <h3 class="area-name">Plano</h3>
+            <p class="area-details">West Plano, Legacy West corridor, Willow Bend &amp; East Plano historic districts.</p>
+          </div>
+
+          <div class="area-card cut-card">
+            <div class="area-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <h3 class="area-name">Frisco</h3>
+            <p class="area-details">Stonebriar, The Star area, Phillips Creek Ranch &amp; North Frisco residential zones.</p>
+          </div>
+
+          <div class="area-card cut-card">
+            <div class="area-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <h3 class="area-name">Irving</h3>
+            <p class="area-details">Las Colinas, Valley Ranch, Heritage District &amp; DFW Airport commercial perimeters.</p>
+          </div>
+
+          <div class="area-card cut-card">
+            <div class="area-icon-wrap" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <h3 class="area-name">Arlington</h3>
+            <p class="area-details">Entertainment District, Dalworthington Gardens, Pantego &amp; South Arlington neighborhoods.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: Reviews (3 Fictional Clients) -->
+    <section class="section reviews-section" id="reviews" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">TESTIMONIAL ARCHIVE</p>
+          <h2 class="section-title" id="reviews-heading">CLIENT PERSPECTIVES</h2>
+          <p class="section-subtitle">Real experiences shared by North Texas homeowners. Individual results and timelines vary per property condition.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1 -->
+          <article class="review-card cut-card">
+            <div class="review-stars" aria-label="Rating: 5 out of 5 stars">
+              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <p class="review-quote">"After the April hailstorm hit our neighborhood, Ironcrest walked our roof, photographed every dented valley, and gave us an organized packet that made discussing repairs with our insurer straightforward."</p>
+            <div class="reviewer-meta">
+              <span class="reviewer-avatar">DR</span>
+              <div>
+                <p class="reviewer-name">Daniel R.</p>
+                <p class="reviewer-loc">Plano, TX &bull; Roof Replacement</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="review-card cut-card">
+            <div class="review-stars" aria-label="Rating: 5 out of 5 stars">
+              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <p class="review-quote">"We opted for standing seam metal on our home renovation. The Ironcrest crew kept the yard completely clear of debris every single evening and completed the project right within the projected window."</p>
+            <div class="reviewer-meta">
+              <span class="reviewer-avatar">MG</span>
+              <div>
+                <p class="reviewer-name">Maria G.</p>
+                <p class="reviewer-loc">Frisco, TX &bull; Metal Roofing</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="review-card cut-card">
+            <div class="review-stars" aria-label="Rating: 5 out of 5 stars">
+              <span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <p class="review-quote">"Had persistent flashing leakage around my second-story dormers. Another contractor just applied silicone, but Ironcrest stripped it back to the plywood, corrected the flashing, and solved the leak."</p>
+            <div class="reviewer-meta">
+              <span class="reviewer-avatar">TW</span>
+              <div>
+                <p class="reviewer-name">Tom W.</p>
+                <p class="reviewer-loc">Irving, TX &bull; Roof Repair</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: FAQ (6 Questions, Non-absolute) -->
+    <section class="section faq-section" id="faq" aria-labelledby="faq-heading">
+      <div class="container faq-container">
+        <div class="section-header">
+          <p class="section-tag">CLARITY &amp; STANDARDS</p>
+          <h2 class="section-title" id="faq-heading">FREQUENTLY ASKED QUESTIONS</h2>
+          <p class="section-subtitle">Straightforward answers regarding insurance documentation, schedules, warranties, and project requirements.</p>
+        </div>
+
+        <div class="accordion" id="faq-accordion">
+          <!-- FAQ 1: Insurance -->
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-1" id="faq-btn-1">
+              <span class="accordion-title">How do you help with insurance documentation?</span>
+              <span class="accordion-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12" class="horizontal-line"></line></svg>
+              </span>
+            </button>
+            <div class="accordion-content" id="faq-ans-1" role="region" aria-labelledby="faq-btn-1">
+              <div class="accordion-inner">
+                <p>We provide photographic evidence of hail strikes, wind uplift, and moisture intrusion, accompanied by itemized scope measurements. We help you document insurance claims thoroughly; however, claim approval, deductible obligations, and settlement decisions remain strictly subject to your insurer's policy terms.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2: Timeline -->
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-2" id="faq-btn-2">
+              <span class="accordion-title">What is the typical timeline for a complete roof replacement?</span>
+              <span class="accordion-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12" class="horizontal-line"></line></svg>
+              </span>
+            </button>
+            <div class="accordion-content" id="faq-ans-2" role="region" aria-labelledby="faq-btn-2">
+              <div class="accordion-inner">
+                <p>Most standard residential asphalt roofs are installed in approximately 1 to 2 days, weather permitting. Complex multi-tier rooflines, metal panel fabrications, or unexpected decking rot discovered during tear-off can extend the schedule. We keep you updated daily on progress.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3: Materials -->
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-3" id="faq-btn-3">
+              <span class="accordion-title">Which materials perform most reliably in North Texas heat and storms?</span>
+              <span class="accordion-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12" class="horizontal-line"></line></svg>
+              </span>
+            </button>
+            <div class="accordion-content" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3">
+              <div class="accordion-inner">
+                <p>Class 4 impact-resistant architectural shingles and standing seam 24-gauge steel roofs offer strong resistance against hail and high wind speeds. Synthetic underlayment and ridge vent combinations also significantly reduce attic thermal buildup during Texas summers.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4: Warranty -->
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-4" id="faq-btn-4">
+              <span class="accordion-title">What warranty protection is included with your installations?</span>
+              <span class="accordion-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12" class="horizontal-line"></line></svg>
+              </span>
+            </button>
+            <div class="accordion-content" id="faq-ans-4" role="region" aria-labelledby="faq-btn-4">
+              <div class="accordion-inner">
+                <p>We provide warranty-backed workmanship (terms apply, detailed in your proposal) along with standard manufacturer material warranties. Specific coverage periods vary depending on the chosen material brand and system specifications.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5: Permits -->
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-5" id="faq-btn-5">
+              <span class="accordion-title">Do you pull municipal permits with the city?</span>
+              <span class="accordion-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12" class="horizontal-line"></line></svg>
+              </span>
+            </button>
+            <div class="accordion-content" id="faq-ans-5" role="region" aria-labelledby="faq-btn-5">
+              <div class="accordion-inner">
+                <p>Yes. Whenever required by local building departments in Dallas, Plano, Frisco, Irving, or Arlington, we file necessary municipal permits and schedule the mandatory post-installation city inspections.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6: Payment -->
+          <div class="accordion-item">
+            <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-6" id="faq-btn-6">
+              <span class="accordion-title">How does your payment schedule work?</span>
+              <span class="accordion-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12" class="horizontal-line"></line></svg>
+              </span>
+            </button>
+            <div class="accordion-content" id="faq-ans-6" role="region" aria-labelledby="faq-btn-6">
+              <div class="accordion-inner">
+                <p>We never ask for full payment upfront. In accordance with Texas consumer standards, typical structures involve an initial material deposit upon order confirmation, with remaining balances due only after material delivery, final installation, and project walk-through.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SECTION 10: Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <a href="#hero" class="brand-logo footer-logo" aria-label="Ironcrest Roofing and Restoration Home">
+            <span class="brand-crest">
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <polygon points="16,2 30,12 26,12 26,28 6,28 6,12 2,12" fill="#F97316"/>
+                <polygon points="16,8 24,14 22,14 22,24 10,24 10,14 8,14" fill="#111827"/>
+                <line x1="16" y1="12" x2="16" y2="24" stroke="#F97316" stroke-width="2.5"/>
+              </svg>
+            </span>
+            <span class="brand-text">
+              <span class="brand-title">IRONCREST</span>
+              <span class="brand-subtitle">ROOFING &amp; RESTORATION</span>
+            </span>
+          </a>
+          <p class="footer-tagline">Heavy-duty roofing and severe weather restoration engineered for Texas homes and businesses.</p>
+          <p class="footer-address">
+            <strong>Headquarters:</strong><br>
+            4120 Commerce St, Suite 210<br>
+            Dallas, TX 75226
+          </p>
+          <p class="footer-phone">
+            <strong>Dispatch &amp; Office:</strong><br>
+            <a href="tel:+12145550187">(214) 555-0187</a>
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <p class="footer-col-title">Services</p>
+          <ul class="footer-links-list">
+            <li><a href="#services">Roof Replacement</a></li>
+            <li><a href="#services">Roof Repair</a></li>
+            <li><a href="#services">Storm &amp; Hail Damage</a></li>
+            <li><a href="#services">Metal Roofing</a></li>
+            <li><a href="#services">Gutters &amp; Drainage</a></li>
+            <li><a href="#services">Roof Inspections</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <p class="footer-col-title">Service Areas</p>
+          <ul class="footer-links-list">
+            <li><a href="#service-areas">Dallas, TX</a></li>
+            <li><a href="#service-areas">Plano, TX</a></li>
+            <li><a href="#service-areas">Frisco, TX</a></li>
+            <li><a href="#service-areas">Irving, TX</a></li>
+            <li><a href="#service-areas">Arlington, TX</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-hours-col">
+          <p class="footer-col-title">Operational Hours</p>
+          <ul class="footer-hours-list">
+            <li><span>Monday – Friday:</span> <span>7:00 AM – 7:00 PM</span></li>
+            <li><span>Saturday:</span> <span>8:00 AM – 5:00 PM</span></li>
+            <li><span>Sunday:</span> <span>Closed (Emergency on-call)</span></li>
+          </ul>
+          <div class="footer-quick-cta">
+            <button type="button" class="btn btn-primary btn-block open-modal-trigger" data-service="Roof Replacement">
+              <span>Book Inspection</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">
+          Portfolio concept project. Ironcrest Roofing &amp; Restoration is a fictional company; all names, reviews, prices and credentials are illustrative.
+        </p>
+        <p class="footer-copy">
+          &copy; <span id="current-year">2026</span> Ironcrest Roofing &amp; Restoration. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SECTION 11: Booking Modal (3 Steps + Confirmation) -->
+  <div class="modal-backdrop" id="booking-modal" role="dialog" aria-modal="true" aria-labelledby="modal-headline" aria-hidden="true">
+    <div class="modal-dialog cut-card" id="modal-dialog">
+      <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close free inspection booking dialog">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <p class="modal-eyebrow">Zero-Obligation Assessment</p>
+        <h2 class="modal-title" id="modal-headline">Free Roof Inspection</h2>
+        <!-- Step Progress Indicator -->
+        <div class="modal-steps-tracker" id="modal-tracker" aria-label="Booking step progress">
+          <div class="tracker-step active" data-step="1">
+            <span class="step-circle">1</span>
+            <span class="step-name">Service</span>
+          </div>
+          <div class="tracker-line" aria-hidden="true"></div>
+          <div class="tracker-step" data-step="2">
+            <span class="step-circle">2</span>
+            <span class="step-name">Schedule</span>
+          </div>
+          <div class="tracker-line" aria-hidden="true"></div>
+          <div class="tracker-step" data-step="3">
+            <span class="step-circle">3</span>
+            <span class="step-name">Details</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Form Container -->
+      <form id="booking-form" class="modal-form" novalidate>
+
+        <!-- STEP 1: Service Choice -->
+        <fieldset class="form-step step-1 active" id="step-1" aria-labelledby="step-1-legend">
+          <legend class="sr-only" id="step-1-legend">Select Roofing Service</legend>
+          <p class="step-instruction">Select the primary service required for your structure:</p>
+          <div class="choice-cards-grid">
+            <label class="choice-card">
+              <input type="radio" name="selectedService" value="Roof Replacement" checked class="choice-radio">
+              <div class="choice-card-inner">
+                <span class="choice-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                </span>
+                <span class="choice-title">Roof Replacement</span>
+                <span class="choice-desc">Full tear-off and new roof build</span>
+              </div>
+            </label>
+
+            <label class="choice-card">
+              <input type="radio" name="selectedService" value="Roof Repair" class="choice-radio">
+              <div class="choice-card-inner">
+                <span class="choice-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                </span>
+                <span class="choice-title">Roof Repair</span>
+                <span class="choice-desc">Leak isolation, flashing, shingles</span>
+              </div>
+            </label>
+
+            <label class="choice-card">
+              <input type="radio" name="selectedService" value="Storm and Hail Damage" class="choice-radio">
+              <div class="choice-card-inner">
+                <span class="choice-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </span>
+                <span class="choice-title">Storm &amp; Hail Assessment</span>
+                <span class="choice-desc">Diagnostic report for documentation</span>
+              </div>
+            </label>
+
+            <label class="choice-card">
+              <input type="radio" name="selectedService" value="Metal Roofing" class="choice-radio">
+              <div class="choice-card-inner">
+                <span class="choice-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line></svg>
+                </span>
+                <span class="choice-title">Metal Roofing</span>
+                <span class="choice-desc">Architectural standing seam system</span>
+              </div>
+            </label>
+          </div>
+
+          <div class="step-actions">
+            <div></div>
+            <button type="button" class="btn btn-primary next-step-btn" data-next="2">
+              <span>Next: Select Schedule</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </fieldset>
+
+        <!-- STEP 2: Schedule & Urgency -->
+        <fieldset class="form-step step-2" id="step-2" aria-labelledby="step-2-legend">
+          <legend class="sr-only" id="step-2-legend">Schedule Preferred Inspection Time</legend>
+          <p class="step-instruction">Choose your preferred inspection date and appointment window:</p>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="inspect-date" class="field-label">Preferred Date *</label>
+              <input type="date" id="inspect-date" name="inspectDate" class="field-input" required>
+              <span class="field-error" id="inspect-date-error">Please pick a valid date (Monday to Saturday).</span>
+            </div>
+
+            <div class="form-field">
+              <label for="inspect-time" class="field-label">Preferred Time Slot *</label>
+              <div class="select-wrapper">
+                <select id="inspect-time" name="inspectTime" class="field-input calc-select" required>
+                  <option value="">Select a time bracket</option>
+                  <option value="Morning, 8:30 AM">Morning, 8:30 AM – 11:30 AM</option>
+                  <option value="Mid-Day, 12:00 PM">Mid-Day, 12:00 PM – 3:00 PM</option>
+                  <option value="Afternoon, 3:30 PM">Afternoon, 3:30 PM – 6:30 PM</option>
+                </select>
+                <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+              <span class="field-error" id="inspect-time-error">Please select a time slot.</span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="inspect-urgency" class="field-label">Current Property Urgency</label>
+            <div class="select-wrapper">
+              <select id="inspect-urgency" name="urgency" class="field-input calc-select">
+                <option value="Active leak detected">Active leak detected (Needs rapid attention)</option>
+                <option value="Recent storm or hail event">Recent storm or hail event (Checking for damage)</option>
+                <option value="Routine inspection or replacement planning" selected>Routine inspection or replacement planning</option>
+              </select>
+              <svg class="select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </div>
+
+          <div class="step-actions">
+            <button type="button" class="btn btn-outline prev-step-btn" data-prev="1">Back</button>
+            <button type="button" class="btn btn-primary next-step-btn" data-next="3">
+              <span>Next: Contact Details</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </fieldset>
+
+        <!-- STEP 3: Customer Details & Validation -->
+        <fieldset class="form-step step-3" id="step-3" aria-labelledby="step-3-legend">
+          <legend class="sr-only" id="step-3-legend">Property Contact Information</legend>
+          <p class="step-instruction">Where should we dispatch our inspection technician?</p>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="client-name" class="field-label">Full Name *</label>
+              <input type="text" id="client-name" name="clientName" class="field-input" placeholder="e.g. Daniel Reynolds" required autocomplete="name">
+              <span class="field-error" id="client-name-error">Please provide your full name.</span>
+            </div>
+
+            <div class="form-field">
+              <label for="client-phone" class="field-label">Phone Number *</label>
+              <input type="tel" id="client-phone" name="clientPhone" class="field-input" placeholder="(214) 000-0000" required autocomplete="tel">
+              <span class="field-error" id="client-phone-error">Please enter a valid 10-digit phone number.</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="client-email" class="field-label">Email Address *</label>
+              <input type="email" id="client-email" name="clientEmail" class="field-input" placeholder="name@example.com" required autocomplete="email">
+              <span class="field-error" id="client-email-error">Please enter a valid email address.</span>
+            </div>
+
+            <div class="form-field">
+              <label for="property-zip" class="field-label">Property ZIP Code *</label>
+              <input type="text" id="property-zip" name="propertyZip" class="field-input" placeholder="75226" pattern="[0-9]{5}" maxlength="5" required autocomplete="postal-code">
+              <span class="field-error" id="property-zip-error">Enter a 5-digit DFW area ZIP code.</span>
+            </div>
+          </div>
+
+          <div class="form-status-area" id="form-status" role="alert" aria-live="polite"></div>
+
+          <div class="step-actions">
+            <button type="button" class="btn btn-outline prev-step-btn" data-prev="2">Back</button>
+            <button type="submit" class="btn btn-primary" id="submit-booking-btn">
+              <span class="btn-text">Submit Inspection Request</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+        </fieldset>
+      </form>
+
+      <!-- Confirmation Screen (Shown after valid submission) -->
+      <div class="modal-confirmation" id="modal-confirmation" aria-live="polite" hidden>
+        <div class="confirmation-icon-wrap">
+          <svg class="check-svg" width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+            <circle class="check-circle" cx="32" cy="32" r="28" stroke="#F97316" stroke-width="3" fill="none"/>
+            <path class="check-mark" d="M20 33 L28 41 L45 23" stroke="#F97316" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="confirmation-title">Inspection Request Received</h3>
+        <p class="confirmation-lead">Thank you, <strong id="confirm-name">Client</strong>. We have logged your request for our dispatch team.</p>
+
+        <div class="confirmation-summary cut-card">
+          <div class="summary-line">
+            <span class="summary-label">Service:</span>
+            <span class="summary-val" id="confirm-service">Roof Replacement</span>
+          </div>
+          <div class="summary-line">
+            <span class="summary-label">Requested Schedule:</span>
+            <span class="summary-val" id="confirm-schedule">October 15, 2026 &bull; Morning, 8:30 AM</span>
+          </div>
+          <div class="summary-line">
+            <span class="summary-label">Service Zip:</span>
+            <span class="summary-val" id="confirm-zip">75226</span>
+          </div>
+        </div>
+
+        <p class="confirmation-note">Our coordinator will review inspector availability and reach out to the contact number provided to confirm technician assignment.</p>
+
+        <button type="button" class="btn btn-secondary btn-block modal-finish-btn" id="modal-finish-btn">
+          <span>Close Window</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
