@@ -402,7 +402,7 @@ function initEstimateCalculator() {
 }
 
 /* ==========================================================================
-   7. BEFORE/AFTER PROJECT COMPARISON SLIDERS (BUG 3 REBUILD)
+   7. BEFORE/AFTER PROJECT COMPARISON SLIDERS (REAL 2-CARD ENGINE)
    ========================================================================== */
 function initComparisonSliders() {
   const sliders = document.querySelectorAll('.comparison-container');
@@ -434,9 +434,10 @@ function initComparisonSliders() {
       });
     }
 
-    // Pointer events on container (handles click/tap jump & smooth dragging)
+    // Pointer events on container (handles click, drag, touch instantly)
     container.addEventListener('pointerdown', (e) => {
       isDragging = true;
+      container.classList.add('is-active');
       try {
         container.setPointerCapture(e.pointerId);
       } catch (_) {}
@@ -451,6 +452,7 @@ function initComparisonSliders() {
     const stopDragging = (e) => {
       if (isDragging) {
         isDragging = false;
+        container.classList.remove('is-active');
         try {
           container.releasePointerCapture(e.pointerId);
         } catch (_) {}
@@ -460,7 +462,7 @@ function initComparisonSliders() {
     container.addEventListener('pointerup', stopDragging);
     container.addEventListener('pointercancel', stopDragging);
 
-    // Accessible keyboard control (ArrowLeft/ArrowRight in 5% increments, Home/End)
+    // Keyboard support (ArrowLeft, ArrowRight, Home, End)
     container.addEventListener('keydown', (e) => {
       const current = parseFloat(container.getAttribute('aria-valuenow') || '50');
       if (e.key === 'ArrowLeft') {
@@ -478,8 +480,39 @@ function initComparisonSliders() {
       }
     });
 
-    // Start handle firmly at 50%
+    // Initial 50% start
     applyPosition(50);
+
+    // Subtle automatic "Peek" wave animation on first scroll view (Client Wow-Factor!)
+    if (!isReducedMotion && typeof ScrollTrigger !== 'undefined') {
+      ScrollTrigger.create({
+        trigger: container,
+        start: 'top 75%',
+        once: true,
+        onEnter: () => {
+          const peekObj = { p: 50 };
+          gsap.timeline()
+            .to(peekObj, {
+              p: 38,
+              duration: 0.6,
+              ease: 'power2.out',
+              onUpdate: () => applyPosition(peekObj.p)
+            })
+            .to(peekObj, {
+              p: 62,
+              duration: 0.7,
+              ease: 'power2.inOut',
+              onUpdate: () => applyPosition(peekObj.p)
+            })
+            .to(peekObj, {
+              p: 50,
+              duration: 0.5,
+              ease: 'power2.out',
+              onUpdate: () => applyPosition(peekObj.p)
+            });
+        }
+      });
+    }
   });
 }
 
