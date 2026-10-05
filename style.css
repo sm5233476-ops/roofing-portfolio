@@ -1507,17 +1507,20 @@ a {
 }
 
 /* ==========================================================================
-   SECTION 6: PROJECT SHOWCASE (PHOTOS 5, 6, 7)
+   SECTION 6: PROJECT SHOWCASE (2 HIGH-TICKET REAL COMPARISONS)
    ========================================================================== */
-.showcase-grid {
+.showcase-grid-dual {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.75rem;
+  gap: 2.25rem;
+  max-width: 1240px;
+  margin-inline: auto;
 }
 
-@media (min-width: 992px) {
-  .showcase-grid {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 860px) {
+  .showcase-grid-dual {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
@@ -1527,46 +1530,72 @@ a {
   flex-direction: column;
   background-color: var(--color-bg-card);
   border: 1px solid var(--color-border);
+  transition: transform 0.4s var(--ease-expo), border-color 0.4s var(--ease-smooth);
+}
+
+.project-card:hover {
+  border-color: rgba(249, 115, 22, 0.45);
+  transform: translateY(-4px);
 }
 
 .project-header {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  min-height: 52px;
+}
+
+.project-header-left {
+  display: flex;
   flex-direction: column;
-  gap: 0.15rem;
-  margin-bottom: 1rem;
-  min-height: 48px;
+  gap: 0.2rem;
 }
 
 .project-city {
   font-family: var(--font-display);
-  font-size: 1.85rem;
+  font-size: 2.1rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
   line-height: 0.95;
-  white-space: nowrap;
 }
 
 .project-tag {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
   color: var(--color-primary);
+}
+
+.project-year-badge {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  background-color: rgba(6, 10, 18, 0.9);
+  border: 1px solid var(--color-border-bright);
+  color: #94a3b8;
+  clip-path: var(--clip-cut-btn);
   white-space: nowrap;
 }
 
 .comparison-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 11;
   overflow: hidden;
   user-select: none;
   cursor: ew-resize;
   border: 1px solid var(--color-border);
   clip-path: var(--clip-cut-card);
-  margin-bottom: 1rem;
-  touch-action: pan-y;
+  margin-bottom: 1.25rem;
+  touch-action: none;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
 }
 
 .image-wrapper {
@@ -1585,49 +1614,48 @@ a {
   object-fit: cover;
   pointer-events: none;
   user-select: none;
-}
-
-.filtered-before {
-  filter: grayscale(85%) contrast(120%) brightness(0.65) sepia(25%);
+  /* Authentic photos: zero artificial filters */
 }
 
 .badge-label {
   position: absolute;
-  top: 0.65rem;
+  top: 0.85rem;
   font-family: var(--font-heading);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.2rem 0.55rem;
+  padding: 0.35rem 0.75rem;
   clip-path: var(--clip-cut-btn);
   z-index: 5;
   pointer-events: none;
   line-height: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .badge-after {
-  right: 0.65rem;
+  right: 0.85rem;
   background-color: var(--color-primary);
   color: #ffffff;
 }
 
 .badge-before {
-  left: 0.65rem;
+  left: 0.85rem;
   background-color: rgba(6, 10, 18, 0.92);
   color: #ffffff;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border-bright);
 }
 
 .slider-divider {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 2px;
+  width: 3px;
   background-color: #ffffff;
   z-index: 10;
   pointer-events: none;
   transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .slider-handle {
@@ -1635,8 +1663,8 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   background-color: var(--color-primary);
   border: 2px solid #ffffff;
   display: flex;
@@ -1644,17 +1672,24 @@ a {
   justify-content: center;
   clip-path: var(--clip-cut-btn);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 18px rgba(249, 115, 22, 0.75), 0 6px 16px rgba(0, 0, 0, 0.8);
   touch-action: none;
   pointer-events: auto;
+  cursor: grab;
+  transition: transform 0.2s var(--ease-smooth), background-color 0.2s var(--ease-smooth);
+}
+
+.comparison-container.is-active .slider-handle {
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.12);
+  background-color: var(--color-primary-hover);
 }
 
 .project-desc {
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-  line-height: 1.5;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.6;
 }
-
 /* ==========================================================================
    SECTION 7: SERVICE AREAS
    ========================================================================== */
